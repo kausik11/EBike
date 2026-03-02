@@ -6,12 +6,8 @@ function FeaturesSection() {
   return (
     <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
       <div className="mb-6">
-        <p>
-          <img
-            src="https://okinawascooters.com/images/webp/okinawa.svg"
-            alt="VENTURE"
-            className="w-[120px] align-middle"
-          />
+        <p className="mt-1 text-[#6c727c]">
+          <span className="font-heading text-2xl font-bold text-brand align-middle">VENTURE</span>
         </p>
         <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">FEATURES</h2>
       </div>

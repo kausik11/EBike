@@ -8,11 +8,8 @@ function UpdatesSection() {
       <div className="mb-6">
         <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">
           Updates@{' '}
-          <img
-            src="https://okinawascooters.com/images/webp/okinawa2.svg"
-            alt="VENTURE"
-            className="inline w-[120px] align-middle"
-          />
+          <span className="font-heading text-2xl font-bold text-brand align-middle">VENTURE</span>
+        
         </h2>
       </div>
 
