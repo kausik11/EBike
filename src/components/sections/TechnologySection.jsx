@@ -7,9 +7,16 @@ function TechnologySection() {
     <section
       className="mx-auto mt-7 max-w-[1240px] rounded-3xl bg-gradient-to-br from-[#f5f7fb] to-[#eef3f8] px-4 py-10 sm:px-5 sm:py-16"
       id="support"
+      data-aos="fade-up"
     >
       <div className="mb-6">
-        <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">TECHNOLOGY</h2>
+        <h2
+          className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          TECHNOLOGY
+        </h2>
         <p className="mt-1 text-[#6c727c]">
           by{' '}
           <span className="font-heading text-xl font-bold text-brand align-middle sm:text-2xl">
@@ -18,7 +25,7 @@ function TechnologySection() {
         </p>
       </div>
 
-      <div className="grid items-center gap-5 lg:grid-cols-2">
+      <div className="grid items-center gap-5 lg:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
         <div>
           <blockquote className="m-0 font-heading text-[clamp(1.5rem,3vw,2rem)] leading-[1.15] font-bold">
             Creating Innovation in the field of EV Technology
@@ -36,8 +43,13 @@ function TechnologySection() {
       </div>
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {technologyCards.map((card) => (
-          <article key={card.title} className="rounded-[14px] border border-[#e6ebf2] bg-white p-3">
+        {technologyCards.map((card, index) => (
+          <article
+            key={card.title}
+            className="rounded-[14px] border border-[#e6ebf2] bg-white p-3"
+            data-aos="fade-up"
+            data-aos-delay={140 + index * 70}
+          >
             <img
               src={card.image}
               alt={card.title}

@@ -9,7 +9,10 @@ function SubscribeSection() {
 
   return (
     <section className="mx-auto mt-6 max-w-[1240px] px-4 pb-10 sm:px-5 sm:pb-16">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/95 to-slate-800/95 px-5 py-9 text-white sm:rounded-3xl sm:px-8 sm:py-10">
+      <div
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/95 to-slate-800/95 px-5 py-9 text-white sm:rounded-3xl sm:px-8 sm:py-10"
+        data-aos="fade-up"
+      >
         <img
           src="https://okinawascooters.com/images/webp/Mask-scooter2.webp"
           alt=""
@@ -24,7 +27,13 @@ function SubscribeSection() {
         />
 
         <div className="relative z-10">
-          <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.6rem)]">Subscribe for Updates</h2>
+          <h2
+            className="m-0 font-heading text-[clamp(1.8rem,3vw,2.6rem)]"
+            data-aos="fade-up"
+            data-aos-delay="90"
+          >
+            Subscribe for Updates
+          </h2>
           <p className="mt-1.5 text-[#d8deea]">
             Fill in your email address below to subscribe our newsletter.
           </p>
@@ -41,6 +50,8 @@ function SubscribeSection() {
               type="submit"
               aria-label="Subscribe"
               className="cursor-pointer self-end bg-transparent p-0 sm:self-auto"
+              data-aos="fade-left"
+              data-aos-delay="180"
             >
               <img
                 src="https://okinawascooters.com/images/webp/read-more.svg"
@@ -51,7 +62,9 @@ function SubscribeSection() {
           </form>
 
           <div className="mt-5">
-            <h3 className="m-0 font-heading text-[1.45rem]">Follow Us at</h3>
+            <h3 className="m-0 font-heading text-[1.45rem]" data-aos="fade-up" data-aos-delay="200">
+              Follow Us at
+            </h3>
             <div className="mt-2.5 flex flex-wrap gap-2.5">
               <a
                 href="#"

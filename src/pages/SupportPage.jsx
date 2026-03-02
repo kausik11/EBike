@@ -34,10 +34,12 @@ function SupportPage() {
 
       <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
         <div className="grid gap-4 md:grid-cols-3">
-          {supportCards.map((card) => (
+          {supportCards.map((card, index) => (
             <article
               key={card.title}
               className="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
+              data-aos="fade-up"
+              data-aos-delay={80 + index * 80}
             >
               <p className="text-sm tracking-[0.08em] text-brand uppercase">{card.title}</p>
               <a

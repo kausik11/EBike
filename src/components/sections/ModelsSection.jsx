@@ -7,12 +7,16 @@ function ModelsSection() {
     'rounded-full px-5 py-2.5 text-center font-heading text-sm font-bold uppercase tracking-[0.04em] sm:px-6 sm:py-3 sm:text-base'
 
   return (
-    <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16" id="models">
+    <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16" id="models" data-aos="fade-up">
       <div className="mb-6">
         <p className="mb-2 inline-block font-heading text-sm font-bold tracking-[0.08em] text-brand uppercase">
           Scooters
         </p>
-        <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">
+        <h2
+          className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]"
+          data-aos="fade-up"
+          data-aos-delay="120"
+        >
           High Speed Electric Range
         </h2>
       </div>
@@ -21,6 +25,8 @@ function ModelsSection() {
         className="mb-5 flex gap-2.5 overflow-x-auto pb-1 whitespace-nowrap md:flex-wrap"
         role="tablist"
         aria-label="Scooter models"
+        data-aos="fade-up"
+        data-aos-delay="80"
       >
         {products.map((product, index) => (
           <button
@@ -38,7 +44,11 @@ function ModelsSection() {
         ))}
       </div>
 
-      <article className="grid overflow-hidden rounded-3xl border border-[#e8edf3] bg-white shadow-[0_12px_35px_rgba(17,24,39,0.06)] lg:grid-cols-[1.15fr_1fr]">
+      <article
+        className="grid overflow-hidden rounded-3xl border border-[#e8edf3] bg-white shadow-[0_12px_35px_rgba(17,24,39,0.06)] lg:grid-cols-[1.15fr_1fr]"
+        data-aos="fade-up"
+        data-aos-delay="120"
+      >
         <div
           className="grid place-items-center p-4"
           style={{
@@ -90,16 +100,20 @@ function ModelsSection() {
             <h4 className="mt-1 font-heading text-[1.45rem]">Rs. {currentProduct.price}</h4>
           </div>
 
-          <div className="mt-4 grid gap-2.5 sm:flex sm:flex-wrap">
+          <div className="mt-4 grid gap-2.5 sm:flex sm:flex-wrap" data-aos="fade-up" data-aos-delay="200">
             <Link
               to="/book-test-ride"
               className={`${actionButtonClass} w-full bg-white text-slate-900 shadow-[inset_0_0_0_1px_#d8dde4] sm:w-auto`}
+              data-aos="fade-right"
+              data-aos-delay="240"
             >
               Test Ride
             </Link>
             <Link
               to="/vehicles"
               className={`${actionButtonClass} w-full bg-brand text-white transition-colors hover:bg-brand-dark sm:w-auto`}
+              data-aos="fade-left"
+              data-aos-delay="300"
             >
               Buy Now
             </Link>

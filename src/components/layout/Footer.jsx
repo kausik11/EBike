@@ -9,7 +9,10 @@ function Footer() {
 
   return (
     <footer className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
-      <div className="grid gap-6 border-t border-[#d8dde4] pt-8 lg:grid-cols-[0.95fr_1.6fr]">
+      <div
+        className="grid gap-6 border-t border-[#d8dde4] pt-8 lg:grid-cols-[0.95fr_1.6fr]"
+        data-aos="fade-up"
+      >
         <div>
           <p className="mb-3 text-[0.92rem] leading-6 text-[#5f6674]">
             2026 Copyright VENTURE E-BIKE. All Rights Reserved.

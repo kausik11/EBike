@@ -21,9 +21,16 @@
     min-height: 100%;
   }
 
+  html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   body {
     margin: 0;
     min-width: 320px;
+    overflow: hidden;
     background: #ffffff;
     color: #1d2229;
     font-family: var(--font-sans);

@@ -7,7 +7,10 @@ function HeroSection() {
     'rounded-full px-5 py-2.5 text-center font-heading text-sm font-bold uppercase tracking-[0.04em] sm:px-6 sm:py-3 sm:text-base'
 
   return (
-    <section className="relative isolate flex min-h-[58vh] items-end overflow-hidden sm:min-h-[64vh] lg:min-h-[78vh]">
+    <section
+      className="relative isolate flex min-h-[58vh] items-end overflow-hidden sm:min-h-[64vh] lg:min-h-[78vh]"
+      data-aos="zoom-out"
+    >
       <img
         src={currentSlide.banner}
         alt={currentSlide.model}
@@ -21,7 +24,11 @@ function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 pb-6 sm:px-5 sm:pb-12">
+      <div
+        className="relative z-10 mx-auto w-full max-w-[1240px] px-4 pb-6 sm:px-5 sm:pb-12"
+        data-aos="fade-up"
+        data-aos-delay="120"
+      >
         <div className="flex items-center gap-3">
           <img
             src={currentSlide.logo}
@@ -37,16 +44,20 @@ function HeroSection() {
           </Link>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="220">
           <Link
             to="/book-test-ride"
             className={`${actionButtonClass} w-full bg-white text-slate-900 sm:w-auto`}
+            data-aos="fade-right"
+            data-aos-delay="260"
           >
             Test Ride
           </Link>
           <Link
             to="/vehicles"
             className={`${actionButtonClass} w-full bg-brand text-white transition-colors hover:bg-brand-dark sm:w-auto`}
+            data-aos="fade-left"
+            data-aos-delay="320"
           >
             Buy Now
           </Link>
@@ -57,6 +68,8 @@ function HeroSection() {
         className="absolute right-1/2 bottom-4 z-10 flex translate-x-1/2 gap-2 sm:right-5 sm:translate-x-0"
         role="tablist"
         aria-label="Hero slides"
+        data-aos="fade-up"
+        data-aos-delay="180"
       >
         {heroSlides.map((slide, index) => (
           <button

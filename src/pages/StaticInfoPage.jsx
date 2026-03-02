@@ -6,8 +6,17 @@ function StaticInfoPage({ title, description }) {
       <PageIntro eyebrow="Information" title={title} description={description} />
 
       <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8">
-          <h2 className="font-heading text-2xl font-bold text-slate-900 sm:text-3xl">Coming Soon</h2>
+        <div
+          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8"
+          data-aos="fade-up"
+        >
+          <h2
+            className="font-heading text-2xl font-bold text-slate-900 sm:text-3xl"
+            data-aos="fade-up"
+            data-aos-delay="80"
+          >
+            Coming Soon
+          </h2>
           <p className="mt-3 max-w-3xl text-slate-600">
             This page scaffold is implemented and routed. You can now add API calls,
             forms, CMS content, or detailed business sections without changing app
