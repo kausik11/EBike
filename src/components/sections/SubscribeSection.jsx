@@ -3,6 +3,39 @@ import { FiArrowRight } from 'react-icons/fi'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 
+const socialLinks = [
+  {
+    href: 'https://www.facebook.com/',
+    label: 'Facebook',
+    Icon: FaFacebookF,
+    iconClassName: 'text-[#3b5998]',
+  },
+  {
+    href: 'https://x.com/',
+    label: 'Twitter',
+    Icon: FaTwitter,
+    iconClassName: 'text-[#1d9bf0]',
+  },
+  {
+    href: 'https://www.youtube.com/',
+    label: 'Youtube',
+    Icon: FaYoutube,
+    iconClassName: 'text-[#ff0000]',
+  },
+  {
+    href: 'https://www.instagram.com/',
+    label: 'Instagram',
+    Icon: FaInstagram,
+    iconClassName: 'text-[#e1306c]',
+  },
+  {
+    href: 'https://www.linkedin.com/',
+    label: 'LinkedIn',
+    Icon: FaLinkedinIn,
+    iconClassName: 'text-[#0a66c2]',
+  },
+]
+
 function SubscribeSection() {
   const { subscriberEmail, setSubscriberEmail } = useSiteContext()
 
@@ -20,105 +53,69 @@ function SubscribeSection() {
   }
 
   return (
-    <section className="mx-auto mt-6 max-w-[1240px] px-4 pb-10 sm:px-5 sm:pb-16">
-      <div
-        className="glass-dark-panel relative overflow-hidden rounded-2xl px-5 py-9 text-white sm:rounded-3xl sm:px-8 sm:py-10"
-        data-aos="fade-up"
-      >
-        <img
-          src="https://okinawascooters.com/images/webp/Mask-scooter2.webp"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute right-0 bottom-0 hidden w-[38%] max-w-[460px] md:block"
-        />
-        <img
-          src="https://okinawascooters.com/images/webp/Mask-scooter2-mobile.webp"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute right-0 bottom-0 w-[60%] max-w-[260px] md:hidden"
-        />
+    <section className="relative bg-[#eceff2]">
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[36%] bg-gradient-to-l from-[#dfe4ea] via-[#e9edf2]/80 to-transparent lg:block" />
+      <div className="pointer-events-none absolute right-[10%] top-[17%] hidden h-[250px] w-[136px] rounded-[30px] bg-gradient-to-b from-white to-[#d6dde6] opacity-70 shadow-[0_20px_46px_rgba(96,112,137,0.22)] lg:block" />
+      <div className="pointer-events-none absolute right-[15%] bottom-[8%] hidden h-[178px] w-[96px] rounded-[30px] border-[10px] border-[#b7c4d3] opacity-60 lg:block" />
+      <img
+        src="https://okinawascooters.com/images/webp/Mask-scooter2.webp"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-[-106px] left-0 z-20 hidden w-[min(42vw,620px)] max-w-none lg:block"
+      />
 
-        <div className="relative z-10">
+      <div className="mx-auto max-w-[1240px] px-4 py-14 sm:px-5 sm:py-16 lg:py-20" data-aos="fade-up">
+        <div className="mx-auto max-w-[560px] text-center">
           <h2
-            className="m-0 font-heading text-[clamp(1.8rem,3vw,2.6rem)]"
+            className="font-heading text-[clamp(2rem,3.1vw,3rem)] leading-[0.92] font-bold text-[#0f1722]"
             data-aos="fade-up"
-            data-aos-delay="90"
+            data-aos-delay="80"
           >
             Subscribe for Updates
           </h2>
-          <p className="mt-1.5 text-[#d8deea]">
-            Fill in your email address below to subscribe our newsletter.
+          <p className="mt-3 text-[1.03rem] text-[#4a5667]">
+            Fill in your email address below to subscribe our newsletter!
           </p>
-          <form className="mt-4 flex max-w-[520px] flex-col items-stretch gap-2.5 sm:flex-row sm:items-center" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Enter Your Email Address"
-              value={subscriberEmail}
-              onChange={(event) => setSubscriberEmail(event.target.value)}
-              className="w-full flex-1 rounded-full border border-white/35 bg-white/10 px-4 py-2.5 text-white outline-none placeholder:text-[#c7cfdf] focus:border-white/70"
-              required
-            />
-            <button
-              type="submit"
-              aria-label="Subscribe"
-              className="inline-flex cursor-pointer items-center justify-center self-end rounded-full border border-white/40 bg-white/10 p-2.5 text-white transition-colors hover:bg-white/20 sm:self-auto"
-              data-aos="fade-left"
-              data-aos-delay="180"
-            >
-              <FiArrowRight className="text-xl" />
-            </button>
+
+          <form className="mx-auto mt-7 max-w-[430px]" onSubmit={handleSubmit}>
+            <div className="relative">
+              <input
+                type="email"
+                placeholder="Enter Your Email Address"
+                value={subscriberEmail}
+                onChange={(event) => setSubscriberEmail(event.target.value)}
+                className="h-[52px] w-full rounded-full border border-white bg-white/90 px-5 pr-16 text-[0.97rem] text-[#1f2a38] shadow-[0_7px_16px_rgba(91,105,127,0.12)] outline-none placeholder:text-[#7f8b9a] focus:border-brand/50"
+                required
+              />
+              <button
+                type="submit"
+                aria-label="Subscribe"
+                className="absolute top-1/2 right-2 inline-flex h-[38px] w-[38px] -translate-y-1/2 items-center justify-center rounded-full border border-[#d8dee8] bg-white text-[#616f82] transition-colors hover:bg-brand hover:text-white"
+                data-aos="fade-left"
+                data-aos-delay="170"
+              >
+                <FiArrowRight className="text-[1.05rem]" />
+              </button>
+            </div>
           </form>
 
-          <div className="mt-5">
-            <h3 className="m-0 font-heading text-[1.45rem]" data-aos="fade-up" data-aos-delay="200">
+          <div className="mt-9">
+            <h3 className="font-heading text-[1.75rem] font-bold text-[#0f1722]" data-aos="fade-up" data-aos-delay="140">
               Follow Us at
             </h3>
-            <div className="mt-2.5 flex flex-wrap gap-2.5">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white/10"
-              >
-                <FaFacebookF className="text-[16px] text-white" />
-              </a>
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter"
-                className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white/10"
-              >
-                <FaTwitter className="text-[16px] text-white" />
-              </a>
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Youtube"
-                className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white/10"
-              >
-                <FaYoutube className="text-[16px] text-white" />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white/10"
-              >
-                <FaInstagram className="text-[16px] text-white" />
-              </a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="grid h-[38px] w-[38px] place-items-center rounded-full bg-white/10"
-              >
-                <FaLinkedinIn className="text-[16px] text-white" />
-              </a>
+            <div className="mt-4 flex flex-wrap justify-center gap-2.5">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={item.label}
+                  className="grid h-9 w-9 place-items-center rounded-full bg-white shadow-[0_5px_12px_rgba(99,113,135,0.18)] transition-transform hover:-translate-y-0.5"
+                >
+                  {item.Icon({ className: `text-[0.86rem] ${item.iconClassName}` })}
+                </a>
+              ))}
             </div>
           </div>
         </div>

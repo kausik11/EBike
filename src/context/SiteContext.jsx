@@ -1,21 +1,21 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import SiteContext from './siteContextObject'
 
 const heroSlides = [
   {
     banner: 'https://okinawascooters.com/Uploads/banner/1hbanner_Okinawa-banner1.webp',
-    logo: 'https://okinawascooters.com/Uploads/banner/1hlbanner_okhi-90.png',
-    model: 'OKHI-90',
+    model: 'Demo90',
+    name: 'demo',
   },
   {
     banner: 'https://okinawascooters.com/Uploads/banner/5hbanner_lite-banner.jpg',
-    logo: 'https://okinawascooters.com/Uploads/banner/5hlbanner_lite-icon.png',
-    model: 'Lite',
+    model: 'DemoLite',
+    name: 'demo',
   },
   {
     banner: 'https://okinawascooters.com/Uploads/banner/7hbanner_Praisepro-banner.jpg',
-    logo: 'https://okinawascooters.com/Uploads/banner/7hlbanner_praispro-icon.png',
-    model: 'PraisePro',
+    model: 'DemoPraisePro',
+    name: 'demo',
   },
 ]
 
@@ -212,10 +212,21 @@ const siteData = {
   sustainabilityStats,
 }
 
+const getInitialDarkTheme = () => {
+  if (typeof window === 'undefined') return false
+
+  const storedTheme = window.localStorage.getItem('theme')
+  if (storedTheme === 'dark') return true
+  if (storedTheme === 'light') return false
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
 function SiteProvider({ children }) {
   const [activeSlide, setActiveSlide] = useState(0)
   const [activeProduct, setActiveProduct] = useState(0)
   const [subscriberEmail, setSubscriberEmail] = useState('')
+  const [isDarkTheme, setIsDarkTheme] = useState(getInitialDarkTheme)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -223,6 +234,15 @@ function SiteProvider({ children }) {
     }, 4500)
 
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDarkTheme)
+    window.localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light')
+  }, [isDarkTheme])
+
+  const toggleTheme = useCallback(() => {
+    setIsDarkTheme((prev) => !prev)
   }, [])
 
   const value = useMemo(
@@ -236,8 +256,11 @@ function SiteProvider({ children }) {
       setActiveProduct,
       subscriberEmail,
       setSubscriberEmail,
+      isDarkTheme,
+      setIsDarkTheme,
+      toggleTheme,
     }),
-    [activeProduct, activeSlide, subscriberEmail],
+    [activeProduct, activeSlide, isDarkTheme, subscriberEmail, toggleTheme],
   )
 
   return <SiteContext.Provider value={value}>{children}</SiteContext.Provider>
