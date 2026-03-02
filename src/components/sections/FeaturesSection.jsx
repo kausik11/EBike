@@ -7,7 +7,9 @@ function FeaturesSection() {
     <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
       <div className="mb-6">
         <p className="mt-1 text-[#6c727c]">
-          <span className="font-heading text-2xl font-bold text-brand align-middle">VENTURE</span>
+          <span className="font-heading text-xl font-bold text-brand align-middle sm:text-2xl">
+            VENTURE
+          </span>
         </p>
         <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">FEATURES</h2>
       </div>

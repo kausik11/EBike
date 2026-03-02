@@ -9,7 +9,7 @@ function SubscribeSection() {
 
   return (
     <section className="mx-auto mt-6 max-w-[1240px] px-4 pb-10 sm:px-5 sm:pb-16">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900/95 to-slate-800/95 px-5 py-10 text-white sm:px-8">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/95 to-slate-800/95 px-5 py-9 text-white sm:rounded-3xl sm:px-8 sm:py-10">
         <img
           src="https://okinawascooters.com/images/webp/Mask-scooter2.webp"
           alt=""
@@ -28,7 +28,7 @@ function SubscribeSection() {
           <p className="mt-1.5 text-[#d8deea]">
             Fill in your email address below to subscribe our newsletter.
           </p>
-          <form className="mt-4 flex max-w-[520px] items-center gap-2.5" onSubmit={handleSubmit}>
+          <form className="mt-4 flex max-w-[520px] flex-col items-stretch gap-2.5 sm:flex-row sm:items-center" onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Enter Your Email Address"
@@ -37,7 +37,11 @@ function SubscribeSection() {
               className="w-full flex-1 rounded-full border border-white/35 bg-white/10 px-4 py-2.5 text-white outline-none placeholder:text-[#c7cfdf] focus:border-white/70"
               required
             />
-            <button type="submit" aria-label="Subscribe" className="cursor-pointer bg-transparent p-0">
+            <button
+              type="submit"
+              aria-label="Subscribe"
+              className="cursor-pointer self-end bg-transparent p-0 sm:self-auto"
+            >
               <img
                 src="https://okinawascooters.com/images/webp/read-more.svg"
                 alt="Subscribe"
@@ -48,7 +52,7 @@ function SubscribeSection() {
 
           <div className="mt-5">
             <h3 className="m-0 font-heading text-[1.45rem]">Follow Us at</h3>
-            <div className="mt-2.5 flex gap-2.5">
+            <div className="mt-2.5 flex flex-wrap gap-2.5">
               <a
                 href="#"
                 aria-label="Facebook"

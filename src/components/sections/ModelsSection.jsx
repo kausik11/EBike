@@ -4,7 +4,7 @@ import useSiteContext from '../../context/useSiteContext'
 function ModelsSection() {
   const { products, currentProduct, activeProduct, setActiveProduct } = useSiteContext()
   const actionButtonClass =
-    'rounded-full px-6 py-3 font-heading text-base font-bold uppercase tracking-[0.04em]'
+    'rounded-full px-5 py-2.5 text-center font-heading text-sm font-bold uppercase tracking-[0.04em] sm:px-6 sm:py-3 sm:text-base'
 
   return (
     <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16" id="models">
@@ -90,16 +90,16 @@ function ModelsSection() {
             <h4 className="mt-1 font-heading text-[1.45rem]">Rs. {currentProduct.price}</h4>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2.5">
+          <div className="mt-4 grid gap-2.5 sm:flex sm:flex-wrap">
             <Link
               to="/book-test-ride"
-              className={`${actionButtonClass} bg-white text-slate-900 shadow-[inset_0_0_0_1px_#d8dde4]`}
+              className={`${actionButtonClass} w-full bg-white text-slate-900 shadow-[inset_0_0_0_1px_#d8dde4] sm:w-auto`}
             >
               Test Ride
             </Link>
             <Link
               to="/vehicles"
-              className={`${actionButtonClass} bg-brand text-white transition-colors hover:bg-brand-dark`}
+              className={`${actionButtonClass} w-full bg-brand text-white transition-colors hover:bg-brand-dark sm:w-auto`}
             >
               Buy Now
             </Link>

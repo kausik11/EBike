@@ -4,10 +4,10 @@ import useSiteContext from '../../context/useSiteContext'
 function HeroSection() {
   const { heroSlides, currentSlide, activeSlide, setActiveSlide } = useSiteContext()
   const actionButtonClass =
-    'rounded-full px-6 py-3 font-heading text-base font-bold uppercase tracking-[0.04em]'
+    'rounded-full px-5 py-2.5 text-center font-heading text-sm font-bold uppercase tracking-[0.04em] sm:px-6 sm:py-3 sm:text-base'
 
   return (
-    <section className="relative isolate flex min-h-[64vh] items-end overflow-hidden lg:min-h-[78vh]">
+    <section className="relative isolate flex min-h-[58vh] items-end overflow-hidden sm:min-h-[64vh] lg:min-h-[78vh]">
       <img
         src={currentSlide.banner}
         alt={currentSlide.model}
@@ -26,13 +26,13 @@ function HeroSection() {
           <img
             src={currentSlide.logo}
             alt={currentSlide.model}
-            className="w-[min(72vw,360px)]"
+            className="w-[min(72vw,360px)] max-w-[240px] sm:max-w-none"
           />
           <Link to="/vehicles" aria-label="Explore model">
             <img
               src="https://okinawascooters.com/images/webp/arrow-w.svg"
               alt="Explore"
-              className="h-10 w-10 rounded-full bg-white/20 p-2.5"
+              className="h-9 w-9 rounded-full bg-white/20 p-2 sm:h-10 sm:w-10 sm:p-2.5"
             />
           </Link>
         </div>
@@ -40,20 +40,24 @@ function HeroSection() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             to="/book-test-ride"
-            className={`${actionButtonClass} bg-white text-slate-900`}
+            className={`${actionButtonClass} w-full bg-white text-slate-900 sm:w-auto`}
           >
             Test Ride
           </Link>
           <Link
             to="/vehicles"
-            className={`${actionButtonClass} bg-brand text-white transition-colors hover:bg-brand-dark`}
+            className={`${actionButtonClass} w-full bg-brand text-white transition-colors hover:bg-brand-dark sm:w-auto`}
           >
             Buy Now
           </Link>
         </div>
       </div>
 
-      <div className="absolute right-5 bottom-5 z-10 flex gap-2" role="tablist" aria-label="Hero slides">
+      <div
+        className="absolute right-1/2 bottom-4 z-10 flex translate-x-1/2 gap-2 sm:right-5 sm:translate-x-0"
+        role="tablist"
+        aria-label="Hero slides"
+      >
         {heroSlides.map((slide, index) => (
           <button
             key={slide.model}

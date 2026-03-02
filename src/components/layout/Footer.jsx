@@ -52,7 +52,7 @@ function Footer() {
             </a>
             <a
               href="mailto:support@ventureebike.com"
-              className="mb-3 block text-[0.93rem] text-[#252c39] hover:text-brand"
+              className="mb-3 block break-all text-[0.93rem] text-[#252c39] hover:text-brand"
             >
               support@ventureebike.com
             </a>

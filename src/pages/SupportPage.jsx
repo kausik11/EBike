@@ -42,7 +42,7 @@ function SupportPage() {
               <p className="text-sm tracking-[0.08em] text-brand uppercase">{card.title}</p>
               <a
                 href={card.href}
-                className="mt-2 block break-all font-heading text-2xl font-bold text-slate-900 hover:text-brand"
+                className="mt-2 block break-all font-heading text-xl font-bold text-slate-900 hover:text-brand sm:text-2xl"
               >
                 {card.value}
               </a>

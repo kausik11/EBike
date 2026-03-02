@@ -11,7 +11,10 @@ function TechnologySection() {
       <div className="mb-6">
         <h2 className="m-0 font-heading text-[clamp(1.8rem,3vw,2.7rem)] tracking-[0.03em]">TECHNOLOGY</h2>
         <p className="mt-1 text-[#6c727c]">
-          by <span className="font-heading text-2xl font-bold text-brand align-middle">VENTURE</span>
+          by{' '}
+          <span className="font-heading text-xl font-bold text-brand align-middle sm:text-2xl">
+            VENTURE
+          </span>
         </p>
       </div>
 

@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 function RootLayout() {
   return (
-    <div className="bg-white text-[#1d2229]">
+    <div className="overflow-x-hidden bg-white text-[#1d2229]">
       <Header />
       <main>
         <Outlet />
