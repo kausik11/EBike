@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FiActivity, FiMail, FiMapPin, FiPhone, FiTool } from 'react-icons/fi'
 import useSiteContext from '../../context/useSiteContext'
 import { footerRouteByLabel } from '../../data/staticPages'
 
@@ -10,7 +11,7 @@ function Footer() {
   return (
     <footer className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
       <div
-        className="grid gap-6 border-t border-[#d8dde4] pt-8 lg:grid-cols-[0.95fr_1.6fr]"
+        className="glass-panel grid gap-6 rounded-3xl px-5 py-7 lg:grid-cols-[0.95fr_1.6fr]"
         data-aos="fade-up"
       >
         <div>
@@ -49,32 +50,37 @@ function Footer() {
           <div>
             <a
               href="tel:18004192224"
-              className="mb-2 block text-[0.93rem] text-[#252c39] hover:text-brand"
+              className="mb-2 inline-flex items-center gap-2 text-[0.93rem] text-[#252c39] hover:text-brand"
             >
+              <FiPhone className="text-brand" />
               1800-419-2224
             </a>
             <a
               href="mailto:support@ventureebike.com"
-              className="mb-3 block break-all text-[0.93rem] text-[#252c39] hover:text-brand"
+              className="mb-3 inline-flex items-start gap-2 break-all text-[0.93rem] text-[#252c39] hover:text-brand"
             >
+              <FiMail className="mt-0.5 shrink-0 text-brand" />
               support@ventureebike.com
             </a>
             <Link
               to="/become-a-dealer"
-              className="mb-2 block w-full rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
+              className="mb-2 inline-flex w-full items-center gap-2 rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
             >
+              <FiActivity className="text-brand" />
               Become a Dealer
             </Link>
             <Link
               to="/book-test-ride"
-              className="mb-2 block w-full rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
+              className="mb-2 inline-flex w-full items-center gap-2 rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
             >
+              <FiMapPin className="text-brand" />
               Book Test Ride
             </Link>
             <Link
               to="/roadside-assistance"
-              className="block w-full rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
+              className="inline-flex w-full items-center gap-2 rounded-full border border-[#dce3eb] bg-white px-3 py-2 text-left text-[0.93rem] text-slate-900"
             >
+              <FiTool className="text-brand" />
               Roadside Assistance
             </Link>
           </div>

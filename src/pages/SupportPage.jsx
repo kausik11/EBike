@@ -37,7 +37,7 @@ function SupportPage() {
           {supportCards.map((card, index) => (
             <article
               key={card.title}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]"
+              className="glass-soft rounded-2xl p-5"
               data-aos="fade-up"
               data-aos-delay={80 + index * 80}
             >

@@ -34,8 +34,8 @@ function ModelsSection() {
             type="button"
             className={`rounded-full border px-4 py-2.5 font-heading text-[0.98rem] font-bold tracking-[0.03em] transition-colors ${
               index === activeProduct
-                ? 'border-slate-800 bg-slate-800 text-white'
-                : 'border-[#d8dde4] bg-white text-slate-800 hover:border-slate-800/30'
+                ? 'glass-soft border-slate-700 bg-slate-800/90 text-white'
+                : 'glass-soft border-white/60 text-slate-800 hover:border-slate-800/30'
             }`}
             onClick={() => setActiveProduct(index)}
           >
@@ -45,7 +45,7 @@ function ModelsSection() {
       </div>
 
       <article
-        className="grid overflow-hidden rounded-3xl border border-[#e8edf3] bg-white shadow-[0_12px_35px_rgba(17,24,39,0.06)] lg:grid-cols-[1.15fr_1fr]"
+        className="glass-panel grid overflow-hidden rounded-3xl lg:grid-cols-[1.15fr_1fr]"
         data-aos="fade-up"
         data-aos-delay="120"
       >
@@ -78,21 +78,21 @@ function ModelsSection() {
           </div>
 
           <div className="mt-4 grid gap-3 md:grid-cols-3">
-            <div className="rounded-[14px] border border-[#ecf0f5] bg-[#fbfcfe] p-3">
+            <div className="glass-soft rounded-[14px] p-3">
               <p className="m-0 text-sm text-[#717785]">Range</p>
               <h3 className="mt-1 font-heading text-[1.22rem]">{currentProduct.range}</h3>
             </div>
-            <div className="rounded-[14px] border border-[#ecf0f5] bg-[#fbfcfe] p-3">
+            <div className="glass-soft rounded-[14px] p-3">
               <p className="m-0 text-sm text-[#717785]">Top Speed</p>
               <h3 className="mt-1 font-heading text-[1.22rem]">{currentProduct.speed}</h3>
             </div>
-            <div className="rounded-[14px] border border-[#ecf0f5] bg-[#fbfcfe] p-3">
+            <div className="glass-soft rounded-[14px] p-3">
               <p className="m-0 text-sm text-[#717785]">Charging</p>
               <h3 className="mt-1 font-heading text-[1.22rem]">{currentProduct.charging}</h3>
             </div>
           </div>
 
-          <div className="mt-4 rounded-[14px] border border-[#ecf0f5] bg-[#fbfcfe] p-3.5">
+          <div className="glass-soft mt-4 rounded-[14px] p-3.5">
             <span className="inline-block rounded-full bg-emerald-100 px-2.5 py-0.5 text-[0.8rem] font-bold text-emerald-800">
               In-stock
             </span>

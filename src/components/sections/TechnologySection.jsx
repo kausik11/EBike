@@ -5,7 +5,7 @@ function TechnologySection() {
 
   return (
     <section
-      className="mx-auto mt-7 max-w-[1240px] rounded-3xl bg-gradient-to-br from-[#f5f7fb] to-[#eef3f8] px-4 py-10 sm:px-5 sm:py-16"
+      className="glass-panel mx-auto mt-7 max-w-[1240px] rounded-3xl px-4 py-10 sm:px-5 sm:py-16"
       id="support"
       data-aos="fade-up"
     >
@@ -46,7 +46,7 @@ function TechnologySection() {
         {technologyCards.map((card, index) => (
           <article
             key={card.title}
-            className="rounded-[14px] border border-[#e6ebf2] bg-white p-3"
+            className="glass-soft rounded-[14px] p-3"
             data-aos="fade-up"
             data-aos-delay={140 + index * 70}
           >

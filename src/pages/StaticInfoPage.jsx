@@ -7,7 +7,7 @@ function StaticInfoPage({ title, description }) {
 
       <section className="mx-auto max-w-[1240px] px-4 py-10 sm:px-5 sm:py-16">
         <div
-          className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:p-8"
+          className="glass-soft rounded-2xl p-6 sm:p-8"
           data-aos="fade-up"
         >
           <h2

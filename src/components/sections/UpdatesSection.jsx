@@ -20,7 +20,7 @@ function UpdatesSection() {
         {updates.map((item, index) => (
           <article
             key={item.title}
-            className="overflow-hidden rounded-[14px] border border-[#e8edf3] bg-white shadow-[0_8px_20px_rgba(17,24,39,0.06)]"
+            className="glass-soft overflow-hidden rounded-[14px]"
             data-aos="fade-up"
             data-aos-delay={90 + index * 90}
           >

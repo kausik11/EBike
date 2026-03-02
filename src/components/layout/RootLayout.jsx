@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import AOS from 'aos'
 import { Outlet, useLocation } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -21,12 +22,25 @@ function RootLayout() {
   }, [location.pathname])
 
   return (
-    <div className="overflow-x-hidden bg-white text-[#1d2229]">
+    <div className="relative isolate overflow-x-hidden text-[#1d2229]">
+      <div className="premium-bg" aria-hidden="true" />
       <Header />
-      <main>
+      <main className="relative z-10">
         <Outlet />
       </main>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={2200}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored"
+      />
     </div>
   )
 }

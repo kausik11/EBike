@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { FiInfo, FiMapPin, FiMenu, FiX } from 'react-icons/fi'
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -21,7 +22,7 @@ function Header() {
     }`
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-900/10 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/35 bg-white/45 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-4 px-4 py-3 sm:px-5">
         <Link
           to="/"
@@ -43,23 +44,26 @@ function Header() {
         <div className="flex items-center gap-2.5">
           <Link
             to="/find-us"
-            className="hidden rounded-full bg-slate-900 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-white md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-slate-900 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-white md:inline-flex"
           >
+            <FiMapPin className="text-[0.95rem]" />
             Find Us
           </Link>
           <button
             type="button"
-            className="rounded-full bg-slate-100 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-slate-900 lg:hidden"
+            className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-slate-900 lg:hidden"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-nav-panel"
           >
+            {isMobileMenuOpen ? <FiX className="text-base" /> : <FiMenu className="text-base" />}
             {isMobileMenuOpen ? 'Close' : 'Menu'}
           </button>
           <Link
             to="/about-us"
-            className="hidden rounded-full bg-slate-100 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-slate-900 lg:inline-flex"
+            className="hidden items-center gap-1.5 rounded-full bg-slate-100 px-4 py-2 font-heading text-[0.95rem] font-bold tracking-[0.02em] text-slate-900 lg:inline-flex"
           >
+            <FiInfo className="text-[0.95rem]" />
             About
           </Link>
         </div>
@@ -88,16 +92,18 @@ function Header() {
           <div className="mt-3 grid grid-cols-2 gap-2">
             <Link
               to="/find-us"
-              className="rounded-xl bg-slate-900 px-3 py-2 text-center font-heading text-sm font-bold text-white"
+              className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-slate-900 px-3 py-2 text-center font-heading text-sm font-bold text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
+              <FiMapPin />
               Find Us
             </Link>
             <Link
               to="/about-us"
-              className="rounded-xl bg-slate-100 px-3 py-2 text-center font-heading text-sm font-bold text-slate-900"
+              className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-slate-100 px-3 py-2 text-center font-heading text-sm font-bold text-slate-900"
               onClick={() => setIsMobileMenuOpen(false)}
             >
+              <FiInfo />
               About
             </Link>
           </div>

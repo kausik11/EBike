@@ -24,7 +24,7 @@ function FeaturesSection() {
         {features.map((feature, index) => (
           <article
             key={feature.title}
-            className="flex items-center gap-3 rounded-[14px] border border-[#e7edf3] bg-gradient-to-br from-white to-[#f7fafc] p-4"
+            className="glass-soft flex items-center gap-3 rounded-[14px] p-4"
             data-aos="fade-up"
             data-aos-delay={80 + index * 70}
           >
