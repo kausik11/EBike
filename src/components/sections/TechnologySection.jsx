@@ -1,4 +1,5 @@
 import useSiteContext from '../../context/useSiteContext'
+import { SparklesText } from '@/components/ui/sparkles-text'
 
 function TechnologySection() {
   const { technologyCards } = useSiteContext()
@@ -19,9 +20,13 @@ function TechnologySection() {
         </h2>
         <p className="mt-1 text-[#6c727c]">
           by{' '}
-          <span className="font-heading text-xl font-bold text-brand align-middle sm:text-2xl">
+          <SparklesText
+            className="inline-block align-middle font-heading text-xl font-bold text-brand sm:text-2xl"
+            sparklesCount={8}
+            colors={{ first: '#a4ce3e', second: '#a4ce3e' }}
+          >
             VENTURE
-          </span>
+          </SparklesText>
         </p>
       </div>
 

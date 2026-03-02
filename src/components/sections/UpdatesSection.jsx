@@ -1,4 +1,5 @@
 import useSiteContext from '../../context/useSiteContext'
+import { SparklesText } from '@/components/ui/sparkles-text'
 
 function UpdatesSection() {
   const { updates } = useSiteContext()
@@ -12,7 +13,13 @@ function UpdatesSection() {
           data-aos-delay="100"
         >
           Updates@{' '}
-          <span className="font-heading text-xl font-bold text-brand align-middle sm:text-2xl">VENTURE</span>
+          <SparklesText
+            className="inline-block align-middle font-heading text-xl font-bold text-brand sm:text-2xl"
+            sparklesCount={8}
+            colors={{ first: '#a4ce3e', second: '#a4ce3e' }}
+          >
+            VENTURE
+          </SparklesText>
         </h2>
       </div>
 
